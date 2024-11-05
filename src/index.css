@@ -3,7 +3,7 @@
   --primary: #b52b1d;
   --secondary: #febf00;
   --light: #fff;
-  ---dark: #181818;
+  ---dark: #0a1425;
 }
 /* reset */
 * {
@@ -13,10 +13,28 @@
 }
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
 }
 /* Reused Classes */
 .container {
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
+}
+.btn {
+  background-color: var(--secondary);
+  border: 1px solid var(--secondary);
+  outline: none;
+  color: var(---dark);
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.6rem 1.6rem;
+  text-transform: uppercase;
 }

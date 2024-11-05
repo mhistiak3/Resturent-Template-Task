@@ -1,0 +1,22 @@
+/* variables */
+:root {
+  --primary: #b52b1d;
+  --secondary: #febf00;
+  --light: #fff;
+  ---dark: #181818;
+}
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+/* Reused Classes */
+.container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}

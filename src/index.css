@@ -24,7 +24,8 @@ a {
 /* Reused Classes */
 .container {
   width: 100%;
-  max-width: 1300px;
+  max-width: 1350px;
+  padding:0 1.6rem;
   margin: 0 auto;
 }
 .btn {
@@ -38,3 +39,4 @@ a {
   padding: 0.6rem 1.6rem;
   text-transform: uppercase;
 }
+

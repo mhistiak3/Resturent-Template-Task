@@ -29,7 +29,7 @@ const FoodMenu = () => {
     },
   ]);
 
-  
+
 
   return (
     <div className={classes.foodMenu_section}>
@@ -61,6 +61,14 @@ const FoodMenu = () => {
               </div>
             </div>
           ))}
+        </div>
+        <div className="arrows-bottom">
+          <span className="arrow">
+            <IoIosArrowBack />
+          </span>
+          <span className="arrow active_arrow">
+            <IoIosArrowForward />
+          </span>
         </div>
       </div>
     </div>

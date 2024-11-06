@@ -2,6 +2,7 @@
   width: 100%;
   padding: 5rem 0;
   background-color: var(--scondary-light);
+  overflow-x: hidden;
 }
 .foodMenu_container {
   display: flex;
@@ -46,6 +47,7 @@
   gap: 3rem;
 }
 .foodMenu_card {
+  width: 300px;
   background-color: var(--light);
   display: flex;
   justify-content: center;
@@ -78,4 +80,16 @@
   font-size: 1rem;
   line-height: 2rem;
   color: var(--dark);
+}
+@media (max-width: 700px) {
+  .foodMenu_topBar h2 {
+    font-size: 2.8rem;
+    line-height: 3rem;
+  }
+  .foodMenu_topBar {
+    font-size: 1rem;
+  }
+  .foodMenu_card {
+    width: 330px;
+  }
 }

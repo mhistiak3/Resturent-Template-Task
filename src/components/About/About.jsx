@@ -1,8 +1,8 @@
 import { LiaPhoneVolumeSolid } from "react-icons/lia";
 import classes from "./About.module.css";
-import { useState, useRef } from "react";
+import { memo, useState } from "react";
 
-const About = () => {
+const About = memo(() => {
   const [activeTab, setActiveTab] = useState(0);
   const [fadeClass, setFadeClass] = useState(
     `${classes.fade} ${classes.fade_active}`
@@ -168,6 +168,6 @@ const About = () => {
       </div>
     </div>
   );
-};
+})
 
 export default About;

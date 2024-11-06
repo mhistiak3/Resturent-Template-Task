@@ -2,6 +2,7 @@
 :root {
   --primary: #b52b1d;
   --secondary: #febf00;
+  --scondary-light: #fbf7f2;
   --light: #fff;
   ---dark: #0a1425;
 }
@@ -21,11 +22,26 @@ body {
 a {
   text-decoration: none;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Bebas Neue";
+  font-weight: 400;
+  line-height: 1.2;
+}
+p {
+  font-family: "Roboto";
+  font-weight: 400;
+  line-height: 1.6;
+}
 /* Reused Classes */
 .container {
   width: 100%;
   max-width: 1350px;
-  padding:0 1.2rem;
+  padding: 0 1.2rem;
   margin: 0 auto;
 }
 .btn {
@@ -33,12 +49,31 @@ a {
   border: 1px solid var(--secondary);
   outline: none;
   color: var(---dark);
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: 700;
   font-size: 1.1rem;
   padding: 0.6rem 1.6rem;
   text-transform: uppercase;
 }
-
-
-
+.arrows{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.arrow {
+  background-color: var(--light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  width: 60px;
+  height: 60px;
+  box-shadow: 0px 0px 13.6364px rgba(0, 0, 0, 0.1);
+  border-radius: 75px;
+  font-size:1.8rem;
+  cursor: pointer;
+}
+.active_arrow{
+  color: var(--primary);
+}

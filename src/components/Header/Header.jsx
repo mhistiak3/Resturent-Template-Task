@@ -1,7 +1,7 @@
 import { FaBars, FaTimes } from "react-icons/fa";
 import classes from "./Header.module.css";
-import { useRef } from "react";
-const Header = () => {
+import { memo, useRef } from "react";
+const Header = memo(() => {
   const menuRef = useRef(null);
   const showMenu = () => {
     menuRef.current.classList.add(classes.active_menu);
@@ -64,5 +64,5 @@ const Header = () => {
       </div>
     </header>
   );
-};
+})
 export default Header;

@@ -1,13 +1,14 @@
 .about_section {
   width: 100%;
   padding: 5rem 0;
-  height: 650px;
-  position: relative;
+
 }
 .about_container {
   display: flex;
   height: 100%;
   gap: 3rem;
+  height: 500px;
+  position: relative;
 }
 .about_img {
   width: 50%;
@@ -119,13 +120,13 @@
   transition: 0.5s;
 }
 .info_box > h2 {
-  font-family: "Bebas Neue";
+
   font-weight: 600;
   font-size: 3.5rem;
   line-height: 4rem;
 }
 .info_box > p {
-  font-family: "Roboto";
+
   font-size: 1rem;
   color: var(--dark);
   font-weight: 400;
@@ -158,15 +159,16 @@
 
 .about_element {
   position: absolute;
-  bottom: -130px;
-  right: -260px;
+  bottom: -150px;
+  right: -400px;
   z-index: -1;
 }
 
 /* start services */
 .services {
   display: flex;
-  padding: 60px 0;
+  padding-top: 4rem;
+ 
 }
 .service_box {
   display: flex;
@@ -186,7 +188,7 @@
   color: var(--dark);
 }
 .service_box p {
-  font-family: "Roboto";
+
   font-weight: 400;
   font-size: 1.1rem;
   line-height: 2rem;
@@ -194,7 +196,7 @@
   color: var(--dark);
 }
 @media (max-width: 950px) {
-  .about_section {
+ .about_container  {
     height: auto;
   }
   .about_container {

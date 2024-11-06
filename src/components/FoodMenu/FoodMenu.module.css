@@ -1,0 +1,81 @@
+.foodMenu_section {
+  width: 100%;
+  padding: 5rem 0;
+  background-color: var(--scondary-light);
+}
+.foodMenu_container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.foodMenu_topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.foodMenu_topBar h2 {
+  font-weight: 500;
+  font-size: 3.8rem;
+  line-height: 4rem;
+  color: var(--dark);
+  text-transform: uppercase;
+}
+.foodMenu_topBar p {
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  color: var(--primary);
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding-left: 1.2rem;
+}
+.foodMenu_topBar p::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary);
+}
+
+/* foodMenu_card_container */
+.foodMenu_card_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+}
+.foodMenu_card {
+  background-color: var(--light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 0.4rem;
+  transition: 0.3s;
+}
+.foodMenu_card_img {
+  width: 100%;
+}
+
+.divider {
+  width: 30%;
+  background-color: var(--primary);
+  padding: 0.1rem;
+  margin: auto;
+}
+.foodMenu_card h3 {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: var(--dark);
+}
+.foodMenu_card p {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 2rem;
+  color: var(--dark);
+}

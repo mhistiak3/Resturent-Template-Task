@@ -80,10 +80,10 @@ const FoodMenu = () => {
           ))}
         </div>
         <div className="arrows-bottom">
-          <span className="arrow">
+          <span className="arrow" onClick={changeMenuForward}>
             <IoIosArrowBack />
           </span>
-          <span className="arrow active_arrow">
+          <span className="arrow active_arrow" onClick={changeMenu}>
             <IoIosArrowForward />
           </span>
         </div>

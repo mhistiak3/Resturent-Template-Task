@@ -56,6 +56,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 .review_content {
   padding: 5rem;
@@ -102,7 +106,8 @@
   color: #333333;
 }
 .user_info img {
-  width: 40px;
+  width: 50px;
+  border-radius: 50%;
 }
 .divider {
   width: 40px;

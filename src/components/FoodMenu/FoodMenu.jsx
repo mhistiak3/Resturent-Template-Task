@@ -1,23 +1,24 @@
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import classes from "./FoodMenu.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
 const FoodMenu = () => {
-  const [MenuCards,setMenuCards] = useState([
+  const [menuCards, setMenuCards] = useState([
     {
       id: 1,
-      title: "vegetables burger",
+      title: "Vegetables Burger",
       img: "/burger.png",
       sub: "Barbecue Italian cuisine pizza",
     },
     {
       id: 2,
-      title: "special pizza",
+      title: "Special Pizza",
       img: "/pizza.png",
       sub: "Barbecue Italian cuisine pizza",
     },
     {
       id: 3,
-      title: "Spacial French fries ",
+      title: "Special French Fries",
       img: "/french-fries.png",
       sub: "Barbecue Italian cuisine",
     },
@@ -29,7 +30,23 @@ const FoodMenu = () => {
     },
   ]);
 
+  const changeMenu = () => {
+    const updatedCards = [...menuCards];
+    const firstCard = updatedCards.shift();
+    updatedCards.push(firstCard);
+    setMenuCards(updatedCards);
+  };
+  const changeMenuForward = () => {
+    const updatedCards = [...menuCards];
+    const firstCard = updatedCards.pop();
+    updatedCards.unshift(firstCard);
+    setMenuCards(updatedCards);
+  };
 
+  useEffect(() => {
+    const interval = setInterval(changeMenu, 4000);
+    return () => clearInterval(interval);
+  }, [menuCards]);
 
   return (
     <div className={classes.foodMenu_section}>
@@ -40,19 +57,19 @@ const FoodMenu = () => {
             <h2>POPULAR FOOD ITEMS</h2>
           </div>
           <div className="arrows">
-            <span className="arrow">
+            <span className="arrow" onClick={changeMenuForward}>
               <IoIosArrowBack />
             </span>
-            <span className="arrow active_arrow">
+            <span className="arrow active_arrow" onClick={changeMenu}>
               <IoIosArrowForward />
             </span>
           </div>
         </div>
         <div className={classes.foodMenu_card_container}>
-          {MenuCards.map((item) => (
-            <div className={classes.foodMenu_card} key={item.id}>
+          {menuCards.map((item, index) => (
+            <div key={item.id} className={`${classes.foodMenu_card}`}>
               <div className={classes.foodMenu_card_img}>
-                <img src={item.img} alt="menu" />
+                <img src={item.img} alt={item.title} />
               </div>
               <div className={classes.divider}></div>
               <div className={classes.foodMenu_card_info}>
@@ -74,4 +91,5 @@ const FoodMenu = () => {
     </div>
   );
 };
+
 export default FoodMenu;

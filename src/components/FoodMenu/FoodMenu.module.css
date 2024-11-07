@@ -8,7 +8,6 @@
   display: flex;
   flex-direction: column;
   gap: 3rem;
- 
 }
 .foodMenu_topBar {
   display: flex;
@@ -46,7 +45,9 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 3rem;
+  overflow-x: hidden;
 }
+
 .foodMenu_card {
   width: 300px;
   background-color: var(--light);
@@ -58,8 +59,11 @@
   gap: 1rem;
   padding: 1.5rem;
   border-radius: 0.4rem;
-  transition: 0.3s;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 1;
+  transform: translateX(0);
 }
+
 .foodMenu_card_img {
   width: 100%;
 }

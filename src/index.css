@@ -47,7 +47,7 @@ p {
 }
 .btn {
   background-color: var(--secondary);
-  border: 1px solid var(--secondary);
+  border: 2px solid var(--secondary);
   outline: none;
   color: var(---dark);
   font-family: "Roboto";
@@ -55,6 +55,11 @@ p {
   font-size: 1.1rem;
   padding: 0.6rem 1.6rem;
   text-transform: uppercase;
+  transition: 0.5s ease;
+}
+.btn:hover{
+  background-color: transparent;
+  color: var(--secondary);
 }
 .arrows{
   display: flex;

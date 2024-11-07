@@ -1,18 +1,32 @@
 import { FaBars, FaTimes } from "react-icons/fa";
 import classes from "./Header.module.css";
-import { memo, useRef } from "react";
+import { memo, useEffect, useRef } from "react";
 const Header = memo(() => {
   const menuRef = useRef(null);
+  const navRef = useRef(null);
   const showMenu = () => {
     menuRef.current.classList.add(classes.active_menu);
-
   };
   const hideMenu = () => {
     menuRef.current.classList.remove(classes.active_menu);
   };
+
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      navRef.current.classList.add(classes.sticky_nav);
+    } else {
+      navRef.current.classList.remove(classes.sticky_nav);
+    }
+  };
+useEffect(() => {
+  window.addEventListener("scroll", handleScroll);
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, []);
   return (
     <header className={classes.header_section}>
-      <nav className={classes.nav}>
+      <nav className={classes.nav} ref={navRef}>
         <div className={`${classes.nav_container} container`}>
           <img src="/logo.png" alt="logo" className={classes.logo} />
           <menu className={classes.menu_container} ref={menuRef}>

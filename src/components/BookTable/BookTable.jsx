@@ -69,7 +69,7 @@ const BookTable = () => {
             </div>
             <div>
               <textarea placeholder="Message" required name="message">
-                {" "}
+            
               </textarea>
             </div>
             <div>

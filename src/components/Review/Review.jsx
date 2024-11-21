@@ -1,7 +1,9 @@
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import classes from "./Review.module.css";
 import { useState } from "react";
+import Video from "../Video/Video";
 const Review = () => {
+  const [video, setVideo] = useState(false);
   const reviews = [
     {
       id: 1,
@@ -37,16 +39,58 @@ const Review = () => {
       setIndex(index - 1);
     }
   };
+
+  // openVideo
+  const openVideo = () => {
+    setVideo(true);
+  };
+  const closeVideo = () => {
+    setVideo(false);
+  }
   return (
-    <div className={classes.review_section}>
-      <div className={`${classes.review_container} container`}>
-        <div className={classes.review_topBar}>
-          <div>
-            <p>Crispy, Every Bite Taste</p>
-            <h2>what some of my customers say</h2>
+    <>
+      <Video closeVideo={closeVideo} isVideoOpen={video} />
+
+      <div className={classes.review_section}>
+        <div className={`${classes.review_container} container`}>
+          <div className={classes.review_topBar}>
+            <div>
+              <p>Crispy, Every Bite Taste</p>
+              <h2>what some of my customers say</h2>
+            </div>
+            <div className="arrows">
+              <span className="arrow" onClick={prevReview}>
+                <IoIosArrowBack />
+              </span>
+              <span className="arrow active_arrow" onClick={nextReview}>
+                <IoIosArrowForward />
+              </span>
+            </div>
           </div>
-          <div className="arrows">
-            <span className="arrow" onClick={prevReview}>
+
+          {/* review cards */}
+          <div className={classes.review_cards}>
+            <div className={classes.review_card}>
+              <div className={classes.review_content}>
+                <p>{reviews[index].review}</p>
+                <div className={classes.user_info}>
+                  <div>
+                    <h4>{reviews[index].name}</h4>
+                    <span>{reviews[index].address}</span>
+                  </div>
+                  <div>
+                    <img src={reviews[index].image} alt="avatar" />
+                    <div className={classes.divider}></div>
+                  </div>
+                </div>
+              </div>
+              <div className={classes.review_img}>
+                <img src="/play.png" alt="play" onClick={openVideo} />
+              </div>
+            </div>
+          </div>
+          <div className="arrows-bottom" onClick={prevReview}>
+            <span className="arrow">
               <IoIosArrowBack />
             </span>
             <span className="arrow active_arrow" onClick={nextReview}>
@@ -54,38 +98,8 @@ const Review = () => {
             </span>
           </div>
         </div>
-
-        {/* review cards */}
-        <div className={classes.review_cards}>
-          <div className={classes.review_card}>
-            <div className={classes.review_content}>
-              <p>{reviews[index].review}</p>
-              <div className={classes.user_info}>
-                <div>
-                  <h4>{reviews[index].name}</h4>
-                  <span>{reviews[index].address}</span>
-                </div>
-                <div>
-                  <img src={reviews[index].image} alt="avatar" />
-                  <div className={classes.divider}></div>
-                </div>
-              </div>
-            </div>
-            <div className={classes.review_img}>
-              <img src="/play.png" alt="" />
-            </div>
-          </div>
-        </div>
-        <div className="arrows-bottom" onClick={prevReview}>
-          <span className="arrow">
-            <IoIosArrowBack />
-          </span>
-          <span className="arrow active_arrow" onClick={nextReview}>
-            <IoIosArrowForward />
-          </span>
-        </div>
       </div>
-    </div>
+    </>
   );
 };
 export default Review;

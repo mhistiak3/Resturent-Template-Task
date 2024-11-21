@@ -53,7 +53,9 @@ useEffect(() => {
       <div className={classes.hero_section}>
         <div className={`${classes.hero_container} container`}>
           <div className={classes.hero_info}>
-            <h1>Taste the authentic Saudi cuisine</h1>
+            <div className={classes.hero_title}>
+              <h1>Taste the authentic Saudi cuisine</h1>
+            </div>
             <p>
               Among the best Saudi chefs in the world, serving you something
               beyond flavor.{" "}

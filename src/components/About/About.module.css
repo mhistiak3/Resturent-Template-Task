@@ -1,12 +1,11 @@
 .about_section {
   width: 100%;
-  padding: 5rem 0;
-
+  padding: 120px 0;
 }
 .about_container {
   display: flex;
   height: 100%;
-  gap: 3rem;
+  gap: 4rem;
   height: 500px;
   position: relative;
 }
@@ -116,23 +115,23 @@
 .info_box {
   display: flex;
   flex-direction: column;
-
   transition: 0.5s;
 }
 .info_box > h2 {
-
   font-weight: 600;
-  font-size: 3.5rem;
-  line-height: 4rem;
+  font-size: 62px;
+  line-height: 62px;
+  margin-bottom: 18px;
 }
-.info_box > p {
 
-  font-size: 1rem;
-  color: var(--dark);
+.info_box > p {
   font-weight: 400;
-  margin: 1rem 0;
-  line-height: 1.6rem;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--dark);
+  margin-bottom: 32px;
 }
+
 .info_box_footer {
   margin-top: 1rem;
   display: flex;
@@ -141,8 +140,8 @@
 }
 .info_box_footer > a {
   font-weight: 600;
-  font-size: 1rem;
-  padding: 0.8rem 1.5rem;
+  font-size: 18px;
+  padding: 16px 24px;
 }
 .info_box_footer > span {
   display: flex;
@@ -151,10 +150,14 @@
 }
 .info_box_footer > span > svg {
   color: var(--primary);
-  font-size: 1.5rem;
+  font-size: 24px;
 }
 .info_box_footer > span > b {
   color: var(--dark) !important;
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 .about_element {
@@ -167,8 +170,7 @@
 /* start services */
 .services {
   display: flex;
-  padding-top: 4rem;
- 
+  padding-top: 74px;
 }
 .service_box {
   display: flex;
@@ -176,27 +178,29 @@
   gap: 0.5rem;
   width: 33.33%;
 }
-.service_box img {
+/* .service_box img {
   width: 120px;
   height: 120px;
-}
+} */
 .service_box h4 {
   font-family: "Bebas Neue";
-  font-weight: 500;
-  font-size: 1.9rem;
-  line-height: 2.1rem;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
   color: var(--dark);
 }
-.service_box p {
 
+.service_box p {
   font-weight: 400;
-  font-size: 1.1rem;
-  line-height: 2rem;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: -0.015em;
   letter-spacing: -0.015em;
   color: var(--dark);
 }
+
 @media (max-width: 950px) {
- .about_container  {
+  .about_container {
     height: auto;
   }
   .about_container {
@@ -240,8 +244,7 @@
     line-height: 3rem;
   }
   .info_box > p {
-    font-size: 1rem;
-    line-height: 1.4rem;
+    font-size: 16px;
   }
   .info_box_footer {
     margin-top: 1rem;
@@ -255,6 +258,9 @@
   .info_box_footer > span {
     gap: 0.4rem;
     font-size: 0.9rem;
+  }
+  .info_box_footer > span > b {
+    font-size: 16px;
   }
   .services {
     flex-wrap: wrap;

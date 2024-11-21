@@ -1,6 +1,6 @@
 .bookTable_section {
   width: 100%;
-  padding: 6rem 0;
+  padding: 120px 0;
   background-image: url("/book-table-bg.png");
   background-size: cover;
   background-position: center;
@@ -12,18 +12,18 @@
   max-width: 50%;
 }
 .bookTable_container h2 {
-  font-weight: 500;
-  font-size: 3.8rem;
-  line-height: 4rem;
+  font-weight: 700;
+  font-size: 62px;
+  line-height: 62px;
   color: var(--light);
   text-transform: uppercase;
 }
 .bookTable_container p {
   font-weight: 700;
-  font-size: 1.3rem;
-  line-height: 2rem;
+  font-size: 20px;
+  line-height: 32px;
   color: var(--primary);
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
   position: relative;
   padding-left: 1.2rem;
 }
@@ -38,18 +38,18 @@
 }
 .bookTable_container span {
   font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.4rem;
+  font-size: 16px;
+  line-height: 24px;
   color: var(--light);
   margin: 1rem 0;
   display: block;
 }
 
 .bookTable_form {
-    margin-top: 1rem;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
-  gap: 1.4rem;
+  gap: 30px;
 }
 
 .input_group {
@@ -66,7 +66,7 @@
   width: 100%;
   background-color: transparent;
   color: var(--light);
-  font-family: 'Roboto';
+  font-family: "Roboto";
 }
 
 .bookTable_form textarea {
@@ -81,20 +81,24 @@
 }
 
 .bookTable_form button {
-  padding: 1rem 2rem;
+  padding: 16px 24px;
   cursor: pointer;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
 }
-@media (max-width:900px) {
-    .bookTable_section{
-        padding: 3rem 0;
-    }
-    .bookTable_container {
+
+@media (max-width: 900px) {
+  .bookTable_section {
+    padding: 3rem 0;
+  }
+  .bookTable_container {
     max-width: 100%;
   }
-  .bookTable_container h2{
+  .bookTable_container h2 {
     font-size: 2.8rem;
   }
-  .bookTable_container p{
+  .bookTable_container p {
     font-size: 1.1rem;
   }
 }

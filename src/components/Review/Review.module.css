@@ -1,11 +1,11 @@
 .review_section {
   width: 100%;
-  padding: 6rem 0;
+  padding: 120px 0;
 }
 .review_container {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 60px;
 }
 .review_topBar {
   display: flex;
@@ -13,18 +13,19 @@
   align-items: center;
 }
 .review_topBar h2 {
-  font-weight: 500;
-  font-size: 3.8rem;
-  line-height: 4rem;
+  font-weight: 700;
+  font-size: 62px;
+  line-height: 62px;
   color: var(--dark);
   text-transform: uppercase;
 }
+
 .review_topBar p {
   font-weight: 700;
-  font-size: 1.3rem;
-  line-height: 2rem;
+  font-size: 20px;
+  line-height: 32px;
   color: var(--primary);
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
   position: relative;
   padding-left: 1.2rem;
 }
@@ -69,12 +70,13 @@
 }
 .review_content p {
   font-weight: 400;
-  font-size: 1.4rem;
-  line-height: 2.3rem;
-  color: var(--dark);
+  font-size: 20px;
+  line-height: 34px;
   opacity: 0.87;
+  color: var(--dark);
   position: relative;
 }
+
 .review_content p::before {
   content: "“";
   font-size: 4rem;
@@ -92,12 +94,14 @@
   padding-bottom: 1rem;
 }
 .user_info h4 {
-  font-weight: 500;
-  font-size: 1.1rem;
-  line-height: 1.2rem;
+font-weight: 500;
+font-size: 18px;
+line-height: 20px;
   color: var(--dark);
   opacity: 0.87;
 }
+
+
 .user_info span {
   font-family: "Roboto";
   font-weight: 400;

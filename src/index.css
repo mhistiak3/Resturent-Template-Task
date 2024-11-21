@@ -13,9 +13,8 @@
   box-sizing: border-box;
 }
 html {
-  font-size: 16px;
+  font-size: 15px;
   scroll-behavior: smooth;
- 
 }
 body {
   overflow-x: hidden;
@@ -41,7 +40,7 @@ p {
 /* Reused Classes */
 .container {
   width: 100%;
-  max-width: 1350px;
+  max-width: 1500px;
   padding: 0 1.2rem;
   margin: 0 auto;
 }
@@ -52,16 +51,18 @@ p {
   color: var(---dark);
   font-family: "Roboto";
   font-weight: 700;
-  font-size: 1.1rem;
-  padding: 0.6rem 1.6rem;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 10px 24px;
   text-transform: uppercase;
   transition: 0.5s ease;
 }
-.btn:hover{
+
+.btn:hover {
   background-color: transparent;
   color: var(--secondary);
 }
-.arrows{
+.arrows {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,23 +78,23 @@ p {
   height: 60px;
   box-shadow: 0px 0px 13.6364px rgba(0, 0, 0, 0.1);
   border-radius: 75px;
-  font-size:1.8rem;
+  font-size: 1.8rem;
   cursor: pointer;
 }
-.active_arrow{
+.active_arrow {
   color: var(--primary);
 }
-.arrows-bottom{
+.arrows-bottom {
   display: none;
 }
 @media (max-width: 700px) {
-  .arrows{
+  .arrows {
     display: none;
   }
-  .arrows-bottom{
+  .arrows-bottom {
     display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
   }
 }

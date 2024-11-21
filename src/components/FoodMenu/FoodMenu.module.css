@@ -1,13 +1,13 @@
 .foodMenu_section {
   width: 100%;
-  padding: 5rem 0;
+  padding: 120px 0;
   background-color: var(--scondary-light);
   overflow-x: hidden;
 }
 .foodMenu_container {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 60px;
 }
 .foodMenu_topBar {
   display: flex;
@@ -15,18 +15,19 @@
   align-items: center;
 }
 .foodMenu_topBar h2 {
-  font-weight: 500;
-  font-size: 3.8rem;
-  line-height: 4rem;
+  font-weight: 700;
+  font-size: 62px;
+  line-height: 62px;
   color: var(--dark);
   text-transform: uppercase;
 }
+
 .foodMenu_topBar p {
   font-weight: 700;
-  font-size: 1.3rem;
-  line-height: 2rem;
+  font-size: 20px;
+  line-height: 32px;
   color: var(--primary);
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
   position: relative;
   padding-left: 1.2rem;
 }
@@ -75,11 +76,12 @@
   margin: auto;
 }
 .foodMenu_card h3 {
-  font-weight: 400;
-  font-size: 1.4rem;
-  line-height: 2rem;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
   color: var(--dark);
 }
+
 .foodMenu_card p {
   font-weight: 400;
   font-size: 1rem;
